@@ -17,6 +17,10 @@ lazy val root = (project in file(".")).
       "com.softwaremill.macwire" %% "macrosakka" % "2.3.1" % "provided",
       "com.softwaremill.macwire" %% "util" % "2.3.1",
       "com.softwaremill.macwire" %% "proxy" % "2.3.1",
+      "org.mongodb.scala" %% "mongo-scala-driver" % "2.4.2",
+      "commons-codec" % "commons-codec" % "1.9",
+      "net.debasishg" %% "redisclient" % "3.10",
+      "org.apache.commons" % "commons-lang3" % "3.0",
 
       "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
       "com.typesafe.akka" %% "akka-testkit"         % akkaVersion     % Test,

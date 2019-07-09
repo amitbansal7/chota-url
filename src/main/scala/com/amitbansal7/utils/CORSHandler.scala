@@ -1,4 +1,4 @@
-package com.amitbansal.utils
+package com.amitbansal7.utils
 
 import akka.http.scaladsl.model.HttpMethods._
 import akka.http.scaladsl.model.{ StatusCodes, HttpResponse }
@@ -7,16 +7,13 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.{ Directive0, Route }
 import com.typesafe.config.ConfigFactory
 
-
 trait CORSHandler {
   private val corsResponseHeaders = List(
     `Access-Control-Allow-Origin`.*,
     `Access-Control-Allow-Credentials`(true),
     `Access-Control-Allow-Headers`(
       "Authorization",
-      "Content-Type", "X-Requested-With"
-    )
-  )
+      "Content-Type", "X-Requested-With"))
 
   // Wrap the Route with this method to enable adding of CORS headers
   def corsHandler(r: Route): Route = addAccessControlHeaders {
